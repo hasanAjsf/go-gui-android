@@ -12,6 +12,7 @@ class MainActivity : AppCompatActivity() {
 
         var wv = findViewById<WebView>(R.id.web_view)
         serverJNI()
+      //  wv.loadUrl("http://127.0.0.1:6060/static/index.html")
         wv.loadUrl("http://127.0.0.1:6060/")
         wv.webViewClient = object : WebViewClient() {
             override fun shouldOverrideUrlLoading(viewx: WebView, urlx: String): Boolean {
