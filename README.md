@@ -248,7 +248,8 @@ class MainActivity : AppCompatActivity() {
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">   // <- If do not want action bar
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity"
+            android:configChanges="orientation|screenSize">    // <- A Must to avoid crash at rotating 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
