@@ -5,9 +5,10 @@ import "C"
 // other imports should be seperate from the special Cgo import
 import (
 	"embed"
+	"fmt"
+	"html/template"
 	"log"
 	"net/http"
-	"text/template"
 )
 
 // Embed the file content as string.
@@ -38,7 +39,12 @@ func server() {
 	}()
 
 	http.HandleFunc("/", handler)
+	http.HandleFunc("/Sayhi", HelloHandler)
 
+}
+
+func HelloHandler(w http.ResponseWriter, r *http.Request) {
+	fmt.Fprintf(w, "Hello, there from go\n")
 }
 
 func handler(w http.ResponseWriter, r *http.Request) {
@@ -55,6 +61,7 @@ func handler(w http.ResponseWriter, r *http.Request) {
 		Title    string
 		Response string
 	}{Title: title, Response: path})
+
 }
 
 func main() {}
