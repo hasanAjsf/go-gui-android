@@ -1,7 +1,5 @@
-# go-gui-android
-Hi all, I liked to share the below with you for your feedback and comments.
-
 **Problem**
+
 I've the below simple go server that is running at my laptop (Mac/Windows/Linux):
 ```go
 package main
@@ -265,6 +263,7 @@ class MainActivity : AppCompatActivity() {
 [![enter image description here][2]][2]
 
 **Bonus**
+
 With Go `embed` all static files can be embed in the same library, including `css`, `javascript`, `templates` so you can buid either API, or full app with GUI
 
 ![Screen Shot 2021-08-13 at 6.35.37 PM|690x444](upload://nWOx7xTO9GxML2oFJ8eDSS5e5NA.png) 
